@@ -53,6 +53,7 @@ nav {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
+    margin-left: 150px;
 }
 .dropdown {
     position: relative;
@@ -159,7 +160,74 @@ nav {
     background-color: white;
     color: #000;
 }
+@media (max-width: 2000px) {
+    .menu li a{
+        display: flex;
+        margin-left: 200px;
+        font-size: 20px;
+    }
+    .main img{
+        width: 100%;
+        max-width: 600px;
+        height: 333px;
+    }
+    .menu li a{
+        display: flex;
+        margin-left: 150px;
+    }
+    .right .sun {
+        height: 670px;
+    }
+    .content{
+        margin: 50px auto;  
+    }
+    .content .logo{
+        max-height: 150px;
+        max-width: 300px;
+        object-fit: cover;
+        position: relative;
+        left: 40px;
+    }
+    .content h1{
+        font-family: 'Dancing Script';
+        font-size: 150px;
+    }
+    
+}
+@media (max-width: 1600px) {
+    .main img{
+        width: 100%;
+        max-width: 500px;
+        height: 283px;
+    }
+    .menu li a{
+        display: flex;
+        margin-left: 150px;
+    }
+    .right .sun {
+        height: 570px;
+    }
+    .content{
+        margin: 50px auto;  
+    }
+    .content .logo{
+        max-height: 150px;
+        max-width: 300px;
+        object-fit: cover;
+        position: relative;
+        left: 40px;
+    }
+    .content h1{
+        font-family: 'Dancing Script';
+        font-size: 150px;
+    }
+    
+}
 @media (max-width: 1200px) {
+    .menu li a{
+        display: flex;
+        margin-left: 50px;
+    }
     .hero {
         flex-direction: column;
     }
@@ -173,6 +241,10 @@ nav {
     }
 }
 @media (max-width: 768px) {
+    .menu li a{
+        display: flex;
+        margin-left: 10px;
+    }
     .hero-content h1 {
         font-size: 48px;
     }
@@ -189,6 +261,10 @@ nav {
     }
 }
 @media (max-width: 480px) {
+    .menu li a{
+        display: flex;
+        margin-left: 0;
+    }
     .hero-content h1 {
         font-size: 36px;
     }
@@ -203,16 +279,61 @@ nav {
         height: 150px;
         object-fit: cover;
     }
+    .buttons {
+        display: flex;
+        font-size: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        top: -50px;
+    } 
+    .buttons .btn {
+        flex: 1;
+        text-align: center;
+    }
+    .buttons .btn.video {
+        flex: 0.5;
+        padding: 5px 35px 5px 35px;
+    }
+    header .logo{
+        font-size: 13px;
+    }
+    header li a{
+        font-size: 10px;
+    }
 }
 @media (max-width: 320px) {
+    .menu li a{
+        display: flex;
+        margin-left: -20px;
+    }
+    header .logo{
+        font-size: 13px;
+    }
+    header li a{
+        font-size: 10px;
+    }
     .hero-content h1 {
         font-size: 28px;
     }
     .hero-content p {
         font-size: 12px;
     }
+    .buttons {
+        display: flex;
+        font-size: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+    } 
     .buttons .btn {
-        padding: 4px 8px;
+        flex: 1;
+        text-align: center;
+    }
+    .buttons .btn.video {
+        flex: 0.5;
+        padding: 5px 20px 5px 20px;
     }
     .hero-img img {
         width: 100%;
