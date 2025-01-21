@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Delmiguez Mark John</div>
+            <ul class="menu">
+                <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Photo</a>
+                    <ul class="dropdown-content">
+                        <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/photo/index.html">Sunset</a></li>
+                        <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/photo/place/index.html">Place</a></li>
+                        <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/photo/people/index.html">People</a></li>
+                        <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/photo/pets/index.html">Pets</a></li>
+                        <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/photo/nostalgic/index.html">Nostalgic</a></li>
+                        <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/photo/other/index.html">Others</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/about/index.html">About Me</a></li>
+                <li><a href="file:///E:/CODING/WEBSITE/portfolio_lente/contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-img">
+            <img src="prof.jpg" alt="Delmiguez Mark John">
+        </div>
+        <div class="hero-content">
+            <h1>About Me</h1>
+            <p>Hello! I'm Delmiguez Mark John, a passionate photographer with a deep love for capturing the world around me. Through my lens, I aim to tell stories, evoke emotions, and highlight the beauty in everyday moments. Whether it's a candid street shot, a breathtaking landscape, or a special moment frozen in time, my photography reflects a blend of creativity and precision.
+
+                With a keen eye for detail and a heart for exploration, I continually seek new ways to interpret and showcase the world. Photography, for me, is more than just taking pictures—it's about preserving memories and expressing the art of life.
+                
+                Outside of photography, I enjoy exploring new places, connecting with different cultures, and finding inspiration in the smallest details. Each photo I take is part of a larger journey, one that I’m excited to share with you.
+                <br>
+                <br>
+                Thank you for visiting my portfolio, and I hope my work resonates with you as much as the journey behind each shot has meant to me.
+        </div>
+    </section>
+    <script>
+        const playButton = document.getElementById('play');
+      
+        playButton.addEventListener('click', () => {
+          const videoUrl = 'vid.mp4'; 
+          const video = document.createElement('video');
+          video.src = videoUrl;
+          video.controls = true;
+          video.autoplay = true;
+
+          const modal = document.createElement('div');
+          modal.className = 'modal';
+          modal.style.position = 'fixed';
+          modal.style.top = '0';
+          modal.style.left = '0';
+          modal.style.width = '100%';
+          modal.style.height = '100%';
+          modal.style.background = 'rgba(0, 0, 0, 0.5)';
+          modal.style.display = 'flex';
+          modal.style.justifyContent = 'center';
+          modal.style.alignItems = 'center';
+
+          const closeButton = document.createElement('button');
+          closeButton.textContent = 'Close';
+          closeButton.style.position = 'absolute';
+          closeButton.style.top = '10px';
+          closeButton.style.right = '10px';
+          closeButton.style.background = 'none';
+          closeButton.style.border = 'none';
+          closeButton.style.color = 'white';
+          closeButton.style.cursor = 'pointer';
+
+          closeButton.addEventListener('click', () => {
+            modal.remove();
+          });
+
+          modal.appendChild(video);
+          modal.appendChild(closeButton);
+
+          document.body.appendChild(modal);
+        });
+      </script>
+</body>
+</html>
